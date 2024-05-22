@@ -1,0 +1,17 @@
+{{!-- BEGIN-SNIPPET docs-demo-utils.hbs --}}
+
+{{#each-in this.data as |key-item item-val|}}
+
+    <tr>
+
+      {{#each-in item-val as |cell value|}}
+
+             <td>{{value}}</td>
+               
+      {{/each-in}} 
+
+    </tr>
+
+{{/each-in}}
+
+{{!-- END-SNIPPET --}}

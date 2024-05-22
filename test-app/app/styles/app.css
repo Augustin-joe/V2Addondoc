@@ -1,1 +1,14 @@
 /* Ember supports plain CSS out of the box. More info: https://cli.emberjs.com/release/advanced-use/stylesheets/ */
+
+
+
+.my-ember-addon-logo {
+    background: #2196F3;
+    color: white;
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  @import 'addon-v2.css';

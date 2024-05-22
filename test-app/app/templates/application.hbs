@@ -1,5 +1,20 @@
-{{page-title "TestApp"}}
+{{page-title "V2Addondoc"}}
 
-<h2 id="title">Welcome to Ember</h2>
+
+<DocsHeader  as |header|>
+  <header.link @route="index">
+    <div class="my-ember-addon-logo">
+      <DocsLogo @logo="ember" />
+    </div>  
+  </header.link>
+  <header.link @href="https://github.com/cibernox/ember-basic-dropdown">
+    github
+  </header.link>
+
+</DocsHeader>
 
 {{outlet}}
+
+<DocsKeyboardShortcuts />
+
+<BasicDropdownWormhole />

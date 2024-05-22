@@ -1,0 +1,27 @@
+{{yield}}
+<div class="overlay">
+<div class="edit-container">
+<div class="edit-title">
+<h4>Edit</h4>
+</div>
+<div class="edit-content">
+
+
+ {{#each-in (get @head this.editid) as |heads item-val|}} 
+  {{#if (eq heads 'setting')}}
+        {{else}}
+  <br>
+    <label>{{heads}}</label>
+  <br>  
+
+    <input value={{item-val}} id={{heads}}/>
+       {{/if}}
+  {{/each-in}}
+
+<div class="edit-submit-button">
+<button onclick={{this.submitedit}} type="button">Submit</button>
+
+</div>
+</div>
+</div>
+</div>

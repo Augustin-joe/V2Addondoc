@@ -1,0 +1,38 @@
+<DocsViewer as |viewer|>
+  <viewer.nav as |nav|>
+
+    <nav.section @label="Introduction"/>
+    <nav.item @label="Intro" @route="docs.index" />
+    <nav.item @label="Compatibility" @route="docs.compatibility" />
+    <nav.item @label="Installation" @route="docs.installation" />
+
+    <nav.section @label="Usage"/>
+    <nav.item @label="How to use it" @route="docs.usage" />
+    <nav.item @label="Drop down events" @route="docs.dropdownevents" />
+    <nav.item @label="Trigger events" @route="docs.triggerevents" />
+
+    <nav.section @label="Customization"/>
+    <nav.item @label="Position" @route="docs.position" />
+    <nav.item @label="Disabled" @route="docs.disabled" />
+    <nav.item @label="Overlays" @route="docs.overlays" />
+
+    <nav.section @label="Components"/>
+    <nav.item @label="Addon Components" @route="docs.addoncomponents" />
+
+    <nav.section @label="Helpers"/>
+    <nav.item @label="Addon Helpers" @route="docs.addonhelpers" />
+
+    <nav.section @label="Services"/>
+    <nav.item @label="Addon Services" @route="docs.addonservices" />
+
+    <nav.section @label="Utils"/>
+    <nav.item @label="Addon Utils" @route="docs.addonutils" />
+
+
+  </viewer.nav>
+
+  <viewer.main>
+    {{outlet}}
+  </viewer.main>
+
+</DocsViewer>

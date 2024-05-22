@@ -42,7 +42,10 @@ module.exports = function (environment) {
 
   if (environment === 'production') {
     // here you can enable a production-specific feature
+    ENV.rootURL = '/ADDON_DOCS_ROOT_URL/';
+    ENV.locationType = 'auto';
   }
+  
 
   return ENV;
 };

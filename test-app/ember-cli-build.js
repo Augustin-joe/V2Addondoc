@@ -7,7 +7,12 @@ module.exports = function (defaults) {
     autoImport: {
       watchDependencies: ['addon-v2'],
     },
+    'ember-cli-addon-docs': {
+      documentingAddonAt: '../addon-v2'
+    }
+    
   });
+  // app.import('addon-v2/styles/app.css');
 
   const { maybeEmbroider } = require('@embroider/test-setup');
   return maybeEmbroider(app);
