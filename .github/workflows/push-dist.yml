@@ -20,8 +20,8 @@ jobs:
           cache: npm
       - name: Install Dependencies
         run: npm ci
-      - name: Build Project
-        run: npm run build
+      - name: Run Build
+        run: npm run build --environment=production
         working-directory: 'addon-v2'
       - name: Check Build Artifacts
         run: ls -la ./addon-v2/dist
