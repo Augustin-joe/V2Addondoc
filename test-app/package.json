@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "description": "Test app for addon-v2 addon",
-  "repository": "",
+  "repository": {
+    "type": "git",
+         "url": "https://github.com/Augustin-joe/V2Addondoc/tree/main/test-app"
+       },
   "license": "MIT",
   "author": "",
   "directories": {
