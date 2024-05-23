@@ -10,11 +10,6 @@ module.exports = function (defaults) {
     'ember-cli-addon-docs': {
       documentingAddonAt: '../addon-v2',
     },
-    minifyCSS: {
-      options: {
-        processImport: false
-      }
-    }
   });
   // app.import('addon-v2/styles/app.css');
 
