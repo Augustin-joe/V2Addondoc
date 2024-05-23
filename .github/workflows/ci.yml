@@ -72,6 +72,8 @@ jobs:
           cache: npm
       - name: Install Dependencies
         run: npm ci
+        working-directory: test-app
+
       - name: Run Tests
-        run: ./node_modules/.bin/ember try:one ${{ matrix.try-scenario }} --skip-cleanup
+        run: npx ember try:one ${{ matrix.try-scenario }} --skip-cleanup
         working-directory: test-app
