@@ -1,9 +1,9 @@
 {{yield}}
-<PowerSelect @options={{this.allchoice}} @labelText="Search By:" @selected={{this.searchby}} @onChange={{action (mut this.searchby)}} as |option|>
+<PowerSelect @options={{this.allchoice}} @labelText="Search By:" @selected={{this.searchby}} @onChange={{fn (mut this.searchby)}} as |option|>
     {{option}}
 </PowerSelect>
 <br>
-<label for="searchvalue">Search :</label>
-<input type="text" value={{this.value}} {{on "input" (action this.searchfunc)}} placeholder="Search...">
-
+<label>Search :
+<input type="text" value={{this.value}} {{on "input" this.searchfunc}} placeholder="Search...">
+</label>
 <br>

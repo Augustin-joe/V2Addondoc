@@ -2,28 +2,20 @@
 import Component from '@glimmer/component';
 import { inject as service } from '@ember/service';
 import { action } from '@ember/object';
-import Fetchapi from '../utils/fetchapi';
+import Fetchapi from '../utils/fetchapi.js';
 import { tracked } from '@glimmer/tracking';
 
-// export default class ApplicationController extends Controller {
-
 export default class StartComponent extends Component {
-
   @service datatable;
   @tracked apifetched = false;
-  // @tracked temparr;
 
-//   init() {
-//     super.init(...arguments);
-//     this.fetch_api(1,10);
-//   }
   constructor() {
     super(...arguments);
-    this.fetch_api(1,10);
-  } 
-  
+    this.fetch_api(1);
+  }
+
   @action
-  async fetch_api(pageno,limit) {
+  async fetch_api(pageno) {
     const apiUtil = new Fetchapi();
     // const apiUrl=`https://localhost:7225/Book/${limit}/${pageno}`;
     // const apiUrl=`https://api.publicapis.org/entries/${page}`;
@@ -42,16 +34,8 @@ export default class StartComponent extends Component {
       data[i].setting.visibility = true;
       data[i].setting.ischecked = false;
     }
-    // if (this.datatable.data.length < 10) {
-    //   this.datatable.data = data;
-    // } else {
-    //   this.temparr = this.datatable.data;
-    //   this.temparr.push(...data);
-    //   this.datatable.data = this.temparr;
-    //   // this.datatable.data.push(...data);
-    // }
-    this.datatable.data = data;
 
+    this.datatable.data = data;
 
     this.apifetched = true;
   }

@@ -7,12 +7,11 @@ import { debounce } from '@ember/runloop';
 // import Ember from 'ember';
 // import { get } from '@ember/object';
 
-
 export default class SearchComponent extends Component {
   // @tracked allchoice = Object.keys(this.args.availablechoices[0]);
   @tracked allchoice = this.args.keyvalues;
   @tracked searchby = this.args.keyvalues[0];
-  @tracked value="";
+  @tracked value = '';
 
   constructor() {
     super(...arguments);
@@ -20,7 +19,7 @@ export default class SearchComponent extends Component {
     this.args.setChildReference(this);
   }
 
-  fromparent(){
+  fromparent() {
     // this.value="";
     this.search(this.value);
   }
@@ -29,7 +28,7 @@ export default class SearchComponent extends Component {
   searchfunc(event) {
     const value = event.target.value;
     debounce(this, this.search, value, 500);
-    this.value=value;
+    this.value = value;
   }
 
   search(value) {

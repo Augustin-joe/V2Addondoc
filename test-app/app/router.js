@@ -1,4 +1,4 @@
-import AddonDocsRouter, {docsRoute} from 'ember-cli-addon-docs/router';
+import AddonDocsRouter, { docsRoute } from 'ember-cli-addon-docs/router';
 import config from 'test-app/config/environment';
 
 export default class Router extends AddonDocsRouter {
@@ -20,9 +20,8 @@ Router.map(function () {
     this.route('addonhelpers');
     this.route('addonservices');
     this.route('addonutils');
-
   });
-  
+
   this.route('not-found', { path: '/*path' });
   this.route('demotest', { path: '/components/demotest' });
 });

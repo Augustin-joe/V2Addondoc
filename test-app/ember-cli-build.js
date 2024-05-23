@@ -8,9 +8,8 @@ module.exports = function (defaults) {
       watchDependencies: ['addon-v2'],
     },
     'ember-cli-addon-docs': {
-      documentingAddonAt: '../addon-v2'
-    }
-    
+      documentingAddonAt: '../addon-v2',
+    },
   });
   // app.import('addon-v2/styles/app.css');
 

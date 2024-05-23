@@ -45,7 +45,6 @@ module.exports = function (environment) {
     ENV.rootURL = '/ADDON_DOCS_ROOT_URL/';
     ENV.locationType = 'auto';
   }
-  
 
   return ENV;
 };

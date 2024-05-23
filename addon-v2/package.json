@@ -25,7 +25,7 @@
     "lint:hbs": "ember-template-lint . --no-error-on-unmatched-pattern",
     "lint:hbs:fix": "ember-template-lint . --fix --no-error-on-unmatched-pattern",
     "lint:js": "eslint . --cache",
-    "lint:js:fix": "eslint . --fix",
+    "lint:js:fix": "eslint . --cache --fix",
     "prepack": "rollup --config",
     "start": "rollup --config --watch",
     "test": "echo 'A v2 addon does not have tests, run tests in test-app'"
