@@ -25,14 +25,3 @@ jobs:
         working-directory: 'addon-v2'
       - name: Check Build Artifacts
         run: ls -la ./addon-v2/dist
-      - name: Commit and Push Changes
-        env:
-          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git checkout -b dist
-          git add -f .
-          git commit -m "Publish dist for $GITHUB_SHA"
-          git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}.git dist --force
-        working-directory: './addon-v2'
