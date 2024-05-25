@@ -1,0 +1,1 @@
+{"jsonapi":{"version":"1.0"},"data":{"type":"project","id":"addon-v2","attributes":{"name":"addon-v2","version":"0.0.0","navigationIndex":[]},"relationships":{"modules":{"data":[]}}}}
