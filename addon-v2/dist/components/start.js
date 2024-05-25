@@ -7,7 +7,7 @@ import { precompileTemplate } from '@ember/template-compilation';
 import { g, i, n } from 'decorator-transforms/runtime';
 import { setComponentTemplate } from '@ember/component';
 
-var TEMPLATE = precompileTemplate("{{#if this.apifetched}}\n<List  @fetch_api={{this.fetch_api}}/>\n{{/if}}\n{{yield}}\n\n\n\n<BasicDropdownWormhole />\n\n\n<BasicDropdownWormhole />");
+var TEMPLATE = precompileTemplate("{{#if this.apifetched}}\r\n<List  @fetch_api={{this.fetch_api}}/>\r\n{{/if}}\r\n{{yield}}\r\n\r\n\r\n\r\n<BasicDropdownWormhole />\r\n\r\n\r\n<BasicDropdownWormhole />");
 
 // import Controller from '@ember/controller';
 class StartComponent extends Component {

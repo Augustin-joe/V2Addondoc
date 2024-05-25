@@ -7,7 +7,7 @@ import { precompileTemplate } from '@ember/template-compilation';
 import { g, i, n } from 'decorator-transforms/runtime';
 import { setComponentTemplate } from '@ember/component';
 
-var TEMPLATE = precompileTemplate("{{yield}}\n<PowerSelect @options={{this.allchoice}} @labelText=\"Search By:\" @selected={{this.searchby}} @onChange={{fn (mut this.searchby)}} as |option|>\n    {{option}}\n</PowerSelect>\n<br>\n<label>Search :\n<input type=\"text\" value={{this.value}} {{on \"input\" this.searchfunc}} placeholder=\"Search...\">\n</label>\n<br>");
+var TEMPLATE = precompileTemplate("{{yield}}\r\n<PowerSelect @options={{this.allchoice}} @labelText=\"Search By:\" @selected={{this.searchby}} @onChange={{fn (mut this.searchby)}} as |option|>\r\n    {{option}}\r\n</PowerSelect>\r\n<br>\r\n<label>Search :\r\n<input type=\"text\" value={{this.value}} {{on \"input\" this.searchfunc}} placeholder=\"Search...\">\r\n</label>\r\n<br>");
 
 class SearchComponent extends Component {
   static {

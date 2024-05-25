@@ -6,7 +6,7 @@ import { precompileTemplate } from '@ember/template-compilation';
 import { g, i, n } from 'decorator-transforms/runtime';
 import { setComponentTemplate } from '@ember/component';
 
-var TEMPLATE = precompileTemplate("{{yield}}\n<div class=\"overlay\">\n<div class=\"edit-container\">\n<div class=\"edit-title\">\n<h4>Edit</h4>\n</div>\n<div class=\"edit-content\">\n\n\n {{#each-in (get @head this.editid) as |heads item-val|}} \n  {{#if (eq heads \'setting\')}}\n        {{else}}\n  <br>\n    <label>{{heads}}</label>\n  <br>  \n\n    <input value={{item-val}} id={{heads}}/>\n       {{/if}}\n  {{/each-in}}\n\n<div class=\"edit-submit-button\">\n<button onclick={{this.submitedit}} type=\"button\">Submit</button>\n\n</div>\n</div>\n</div>\n</div>\n");
+var TEMPLATE = precompileTemplate("{{yield}}\r\n<div class=\"overlay\">\r\n<div class=\"edit-container\">\r\n<div class=\"edit-title\">\r\n<h4>Edit</h4>\r\n</div>\r\n<div class=\"edit-content\">\r\n\r\n\r\n {{#each-in (get @head this.editid) as |heads item-val|}} \r\n  {{#if (eq heads \'setting\')}}\r\n        {{else}}\r\n  <br>\r\n    <label>{{heads}}</label>\r\n  <br>  \r\n\r\n    <input value={{item-val}} id={{heads}}/>\r\n       {{/if}}\r\n  {{/each-in}}\r\n\r\n<div class=\"edit-submit-button\">\r\n<button onclick={{this.submitedit}} type=\"button\">Submit</button>\r\n\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n");
 
 class EditComponent extends Component {
   static {
